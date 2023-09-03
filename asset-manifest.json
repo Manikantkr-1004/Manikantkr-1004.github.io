@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.91d396f0.css",
-    "main.js": "/static/js/main.6487787d.js",
+    "main.css": "/static/css/main.d7c3e15f.css",
+    "main.js": "/static/js/main.ed9ba298.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/coder.gif": "/static/media/coder.7463e0fcd0956ceb6cd8.gif",
     "static/media/logo_light.gif": "/static/media/logo_light.fc01468033ea6fb2b8a4.gif",
     "static/media/logo.gif": "/static/media/logo.dcc1424a6c28d4a059cb.gif",
     "static/media/hi.gif": "/static/media/hi.e8b7aa58b12e98ad37d8.gif",
+    "static/media/notes.png": "/static/media/notes.421526f58dfb8c5a1646.png",
     "static/media/upstyle.png": "/static/media/upstyle.0b34a87e33b7b5611f13.png",
+    "static/media/healthelper.png": "/static/media/healthelper.95b40719e1da8eb17f7e.png",
     "static/media/licious.png": "/static/media/licious.58a5051013d18dd203fd.png",
+    "static/media/recipeswap.png": "/static/media/recipeswap.4f72808e2bb3530cd2c3.png",
     "static/media/manikant-kumar.png": "/static/media/manikant-kumar.c6c899c4a290665aaa37.png",
     "static/media/wall.jpg": "/static/media/wall.37b31d4c310c252a30e5.jpg",
     "static/media/load.gif": "/static/media/load.83d1d7ac3355398a6e80.gif",
     "static/media/portfolio_light.png": "/static/media/portfolio_light.7b99494d2d5fc790ae6e.png",
     "static/media/portfolio_dark.png": "/static/media/portfolio_dark.f71033922bb8288c9a72.png",
-    "static/media/healthelper.png": "/static/media/healthelper.f9552fb15b13a30e61be.png",
     "static/media/nodejs.png": "/static/media/nodejs.dbf5d143917b5b366625.png",
     "static/media/HTML.png": "/static/media/HTML.ca57c97f9a27615d4082.png",
     "static/media/styled_components.png": "/static/media/styled_components.b2a4278ae5017d1bc15f.png",
@@ -23,12 +25,12 @@
     "static/media/react.png": "/static/media/react.60f87e57897ede715c07.png",
     "static/media/CSS.png": "/static/media/CSS.bea56c054124d4888194.png",
     "index.html": "/index.html",
-    "main.91d396f0.css.map": "/static/css/main.91d396f0.css.map",
-    "main.6487787d.js.map": "/static/js/main.6487787d.js.map",
+    "main.d7c3e15f.css.map": "/static/css/main.d7c3e15f.css.map",
+    "main.ed9ba298.js.map": "/static/js/main.ed9ba298.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.91d396f0.css",
-    "static/js/main.6487787d.js"
+    "static/css/main.d7c3e15f.css",
+    "static/js/main.ed9ba298.js"
   ]
 }
