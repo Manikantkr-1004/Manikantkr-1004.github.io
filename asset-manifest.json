@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b94a1c23.css",
-    "main.js": "/static/js/main.d94d61b5.js",
+    "main.js": "/static/js/main.e1e5b4d2.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/coder.gif": "/static/media/coder.7463e0fcd0956ceb6cd8.gif",
     "static/media/logo_light.gif": "/static/media/logo_light.fc01468033ea6fb2b8a4.gif",
@@ -13,6 +13,7 @@
     "static/media/licious.png": "/static/media/licious.58a5051013d18dd203fd.png",
     "static/media/recipeswap.png": "/static/media/recipeswap.4f72808e2bb3530cd2c3.png",
     "static/media/manikant-kumar.png": "/static/media/manikant-kumar.c6c899c4a290665aaa37.png",
+    "static/media/bookhub.png": "/static/media/bookhub.01efaa668266571270b1.png",
     "static/media/wall.jpg": "/static/media/wall.37b31d4c310c252a30e5.jpg",
     "static/media/load.gif": "/static/media/load.83d1d7ac3355398a6e80.gif",
     "static/media/portfolio_light.png": "/static/media/portfolio_light.7b99494d2d5fc790ae6e.png",
@@ -26,11 +27,11 @@
     "static/media/CSS.png": "/static/media/CSS.bea56c054124d4888194.png",
     "index.html": "/index.html",
     "main.b94a1c23.css.map": "/static/css/main.b94a1c23.css.map",
-    "main.d94d61b5.js.map": "/static/js/main.d94d61b5.js.map",
+    "main.e1e5b4d2.js.map": "/static/js/main.e1e5b4d2.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b94a1c23.css",
-    "static/js/main.d94d61b5.js"
+    "static/js/main.e1e5b4d2.js"
   ]
 }
