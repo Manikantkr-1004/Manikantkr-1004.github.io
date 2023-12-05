@@ -7,6 +7,8 @@ import express from "../Components/Files/express.png";
 import tailwind from "../Components/Files/tailwind.png";
 import github from "../Components/Files/github.png";
 import mongodb from "../Components/Files/mongodb.png";
+import angular from "../Components/Files/angular.png";
+import prompt from "../Components/Files/prompt_engineering.png";
 import nodejs from "../Components/Files/nodejs.png";
 import postman from "../Components/Files/postman.png";
 import react from "../Components/Files/react.png";
@@ -90,6 +92,14 @@ const Skills = ({theme})=>{
             <Box background={theme?"transparent":"#1A202C"} className="skills-card" p="30px 10px 15px 10px">
                 <Image className="skills-card-img" w="60%" m="auto" src={styled_components} alt="styled" /><br/>
                 <Text className="skills-card-name">Styled Components</Text>
+            </Box>
+            <Box background={theme?"transparent":"#1A202C"} className="skills-card">
+                <Image className="skills-card-img" w="63%" m="auto" src={angular} alt="angular" /><br/>
+                <Text className="skills-card-name">Angular</Text>
+            </Box>
+            <Box background={theme?"transparent":"#1A202C"} className="skills-card">
+                <Image className="skills-card-img" filter={theme?"none":"invert(100%)"} w="63%" m="auto" src={prompt} alt="prompt_engineering" /><br/>
+                <Text className="skills-card-name">Prompt Engineering</Text>
             </Box>
         </SimpleGrid><br/><br/>
         

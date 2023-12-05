@@ -20,8 +20,8 @@ export const MobileMenu=({theme, isOpen, onOpen, onClose})=> {
   const handleResume = ()=>{
         
     const anchor = document.createElement('a');
-    anchor.href = process.env.PUBLIC_URL+ "/Resume/" + "Manikant_Kumar_Resume.pdf";
-    anchor.download = 'Manikant_Kumar_Resume.pdf';
+    anchor.href = process.env.PUBLIC_URL+ "/Resume/" + "Manikant-Kumar-Resume.pdf";
+    anchor.download = 'Manikant-Kumar-Resume.pdf';
     anchor.click();
     window.open("https://drive.google.com/file/d/1jAipz8jJnwlDIziUStWQ-80aRMTC5Zvg/view?usp=sharing","_blank")
   }
