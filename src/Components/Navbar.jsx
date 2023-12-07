@@ -40,7 +40,7 @@ const Navbar = ({theme,setTheme})=>{
         anchor.href = process.env.PUBLIC_URL+ "/Resume/" + "Manikant-Kumar-Resume.pdf";
         anchor.download = 'Manikant-Kumar-Resume.pdf';
         anchor.click();
-        window.open("https://drive.google.com/file/d/1jAipz8jJnwlDIziUStWQ-80aRMTC5Zvg/view?usp=sharing","_blank")
+        window.open("https://drive.google.com/file/d/1HA6KcSjx-O_iH3h-VipGc8vVNrXgjTPg/view?usp=sharing","_blank")
     }
     
 
