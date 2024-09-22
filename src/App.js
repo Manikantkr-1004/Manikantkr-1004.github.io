@@ -1,15 +1,18 @@
 import './App.css';
+import { useEffect, useState, lazy, Suspense } from 'react';
+
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
-import About from './Components/About';
-import Skills from './Components/Skills';
-import Projects from './Components/Projects';
-import Contact from './Components/Contact';
-import { useEffect, useState } from 'react';
-import { Github } from './Components/Github';
+import { Helmet } from "react-helmet";
 import { Background } from './Components/Background';
-import ScrollToTop from './Components/ScrollToTop';
-import {Helmet} from "react-helmet";
+
+const About = lazy(() => import('./Components/About'));
+const Experience = lazy(() => import('./Components/Experience'));
+const Skills = lazy(() => import('./Components/Skills'));
+const Projects = lazy(() => import('./Components/Projects'));
+const Github = lazy(() => import('./Components/Github'));
+const Contact = lazy(() => import('./Components/Contact'));
+const ScrollToTop = lazy(() => import('./Components/ScrollToTop'));
 
 function App() {
 
@@ -34,12 +37,15 @@ function App() {
       <Background theme={theme}/>
       <Navbar theme={theme} setTheme={setTheme}/>
       <Home theme={theme}/>
-      <About theme={theme} />
-      <Skills theme={theme}/>
-      <Projects theme={theme}/>
-      <Github theme={theme} />
-      <Contact theme={theme}/>
-      <ScrollToTop />
+      <Suspense fallback={<div>Loading...</div>}>
+        <About theme={theme} />
+        <Experience theme={theme} />
+        <Skills theme={theme}/>
+        <Projects theme={theme}/>
+        <Github theme={theme} />
+        <Contact theme={theme}/>
+        <ScrollToTop />
+      </Suspense>
     </div>
   );
 }

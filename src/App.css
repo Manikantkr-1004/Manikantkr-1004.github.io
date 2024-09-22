@@ -41,30 +41,36 @@ body::-webkit-scrollbar-track {
   font-size:20px;
   font-family:"arial black";
   font-weight:bold;
-  width: 120px;
+  width: 135px;
   margin: auto;
 }
 .active{
   color: #FE9119;
-  padding: 13px 0px;
-  border: none;
-  border-bottom: 3px solid #FE9119;
 }
 
+.nav-sections>*{
+  position: relative;
+  transition: 0.3s ease-in-out all;
+}
 .nav-sections>*:hover{
   color: #FE9119;
-  padding: 13px 0px;
-  border: none;
-  border-bottom: 3px solid #FE9119;
+}
+.nav-sections > *:not(:last-child)::before{
+  content: "";
+  height: 3px;
+  width: 100%;
+  background: #FE9119;
+  border-radius: 5px;
+  transform: scaleX(0);
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  transition: 0.3s ease-in-out all;
+}
+.nav-sections>*:hover::before{
+  transform: scaleX(1);
 }
 
-.nav-sections>*:nth-child(7):hover{
-  border: none;
-}
-
-.menu:hover{
-  border: none;
-}
 @media all and (max-width:425px) {
   .logo-image img{
     width: 166px;
@@ -129,13 +135,10 @@ body::-webkit-scrollbar-track {
   }
 }
 .about-contact>*{
-  width: 40px;
-  height: 40px;
+  transition: all 0.3s ease-in-out;
 }
 .about-contact>*:hover{
-  width: 45px;
-  height: 45px;
-  transition: height 0.5s, width 0.5s;
+  transform: scale(1.15);
 }
 
 #resume-button-2{
@@ -277,13 +280,13 @@ body::-webkit-scrollbar-track {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  opacity: 0;
+  display: none;
   transition: opacity 0.3s, background-color 0.3s;
   z-index: 999;
 }
 
 .scroll-to-top.show {
-  opacity: 1;
+  display: flex;
 }
 
 .scroll-icon {

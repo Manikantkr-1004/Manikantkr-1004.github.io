@@ -61,6 +61,16 @@ export const MobileMenu=({theme, isOpen, onOpen, onClose})=> {
             <Link
               activeClass="active"
               spy={true}
+              to="experience" //
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <Box onClick={()=> onClose()} className="nav-link-mobile experience">Experience</Box>
+            </Link><br/>
+            <Link
+              activeClass="active"
+              spy={true}
               to="skills" //
               smooth={true}
               offset={-70}
@@ -100,6 +110,7 @@ export const MobileMenu=({theme, isOpen, onOpen, onClose})=> {
             </Link><br/>
             <Box onClick={handleResume} cursor="pointer" background="#FE9119" m="auto" fontSize="20px" fontFamily="arial black" fontWeight="bold" 
             borderRadius="15px" color="black" w="150px" p="5px 10px">Resume {download}</Box>
+            <br />
           </DrawerBody>
         </DrawerContent>
       </Drawer>

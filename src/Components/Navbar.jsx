@@ -78,6 +78,16 @@ const Navbar = ({theme,setTheme})=>{
             <Link
               activeClass="active"
               spy={true}
+              to="experience" //
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <Box className="nav-link experience">Experience</Box>
+            </Link>
+            <Link
+              activeClass="active"
+              spy={true}
               to="skills" //
               smooth={true}
               offset={-70}

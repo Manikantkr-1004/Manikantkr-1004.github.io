@@ -7,14 +7,14 @@ import express from "../Components/Files/express.png";
 import tailwind from "../Components/Files/tailwind.png";
 import github from "../Components/Files/github.png";
 import mongodb from "../Components/Files/mongodb.png";
-import angular from "../Components/Files/angular.png";
+import bootstrap from "../Components/Files/bootstrap.webp";
 import prompt from "../Components/Files/prompt_engineering.png";
 import nodejs from "../Components/Files/nodejs.png";
 import postman from "../Components/Files/postman.png";
 import react from "../Components/Files/react.png";
 import redux from "../Components/Files/redux.png";
 import typescript from "../Components/Files/typescript.png";
-import styled_components from "../Components/Files/styled_components.png";
+import next from "../Components/Files/next.webp";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
@@ -38,68 +38,68 @@ const Skills = ({theme})=>{
 
         <SimpleGrid className="skill-box" alignContent="center" gap="35px" columns={{base:2,sm:3,md:4,lg:7,xl:7}} w="85%" m="auto" mt="70px" color={theme? "black":"white"} >
             <Box background={theme?"transparent":"#1A202C"} className="skills-card">
-                <Image className="skills-card-img" w="61%" m="auto" src={html} alt="html" /><br/>
+                <Image className="skills-card-img" pointerEvents={'none'} w="61%" m="auto" src={html} alt="html" /><br/>
                 <Text className="skills-card-name">HTML</Text>
             </Box>
             <Box background={theme?"transparent":"#1A202C"} className="skills-card">
-                <Image className="skills-card-img" w="62%" m="auto" src={css} alt="css" /><br/>
+                <Image className="skills-card-img" pointerEvents={'none'} w="62%" m="auto" src={css} alt="css" /><br/>
                 <Text className="skills-card-name">CSS</Text>
             </Box>
             <Box background={theme?"transparent":"#1A202C"} className="skills-card">
-                <Image className="skills-card-img" w="60%" m="auto" src={javascript} alt="javascript" /><br/>
+                <Image className="skills-card-img" pointerEvents={'none'} w="60%" m="auto" src={javascript} alt="javascript" /><br/>
                 <Text className="skills-card-name">JavaScript</Text>
             </Box>
             <Box background={theme?"transparent":"#1A202C"} className="skills-card">
-                <Image className="skills-card-img" w="75%" m="auto" src={react} alt="react" /><br/>
+                <Image className="skills-card-img" pointerEvents={'none'} w="75%" m="auto" src={react} alt="react" /><br/>
                 <Text className="skills-card-name">React</Text>
             </Box>
             <Box background={theme?"transparent":"#1A202C"} className="skills-card">
-                <Image className="skills-card-img" w="69%" m="auto" src={redux} alt="redux" /><br/>
+                <Image className="skills-card-img" pointerEvents={'none'} w="69%" m="auto" src={redux} alt="redux" /><br/>
                 <Text className="skills-card-name">Redux</Text>
             </Box>
             <Box background={theme?"transparent":"#1A202C"} className="skills-card">
-                <Image className="skills-card-img" w="67%" m="auto" src={chakra_ui} alt="chakra_ui" /><br/>
+                <Image className="skills-card-img" pointerEvents={'none'} w="67%" m="auto" src={chakra_ui} alt="chakra_ui" /><br/>
                 <Text className="skills-card-name">Chakra UI</Text>
             </Box>
             <Box background={theme?"transparent":"#1A202C"} className="skills-card">
-                <Image className="skills-card-img" w= "67%" m="auto" src={postman} alt="postman" /><br/>
-                <Text className="skills-card-name">Postman</Text>
-            </Box>
-            <Box background={theme?"transparent":"#1A202C"} className="skills-card">
-                <Image className="skills-card-img" w="63%" m="auto" src={typescript} alt="typescript" /><br/>
+                <Image className="skills-card-img" pointerEvents={'none'} w="63%" m="auto" src={typescript} alt="typescript" /><br/>
                 <Text className="skills-card-name">TypeScript</Text>
             </Box>
             <Box background={theme?"transparent":"#1A202C"} className="skills-card">
-                <Image className="skills-card-img" w="66%" m="auto" src={mongodb} alt="mongodb" /><br/>
+                <Image className="skills-card-img" pointerEvents={'none'} w="66%" m="auto" src={mongodb} alt="mongodb" /><br/>
                 <Text className="skills-card-name">Mongo DB</Text>
             </Box>
             <Box background={theme?"transparent":"#1A202C"} className="skills-card">
-                <Image className="skills-card-img" w="60%" m="auto" src={nodejs} alt="nodejs" /><br/>
+                <Image className="skills-card-img" pointerEvents={'none'} w="60%" m="auto" src={nodejs} alt="nodejs" /><br/>
                 <Text className="skills-card-name">Node JS</Text>
             </Box>
             <Box background={theme?"transparent":"#1A202C"} className="skills-card">
-                <Image className="skills-card-img" filter={theme?"none":"invert(100%)"} w="69%" m="auto" src={express} alt="express" /><br/>
+                <Image className="skills-card-img" pointerEvents={'none'} filter={theme?"none":"invert(100%)"} w="69%" m="auto" src={express} alt="express" /><br/>
                 <Text className="skills-card-name">Express</Text>
             </Box>
             <Box background={theme?"transparent":"#1A202C"} className="skills-card">
-                <Image className="skills-card-img" w="80%" m="auto" src={tailwind} alt="tailwind" /><br/>
+                <Image className="skills-card-img" pointerEvents={'none'} w="80%" m="auto" src={tailwind} alt="tailwind" /><br/>
                 <Text mt="10px" className="skills-card-name">Tailwind</Text>
             </Box>
             <Box background={theme?"transparent":"#1A202C"} className="skills-card">
-                <Image className="skills-card-img" filter={theme?"none":"invert(100%)"} w="63%" m="auto" src={github} alt="github" /><br/>
+                <Image className="skills-card-img" pointerEvents={'none'} filter={theme?"none":"invert(100%)"} w="63%" m="auto" src={github} alt="github" /><br/>
                 <Text className="skills-card-name">GitHub</Text>
             </Box>
-            <Box background={theme?"transparent":"#1A202C"} className="skills-card" p="30px 10px 15px 10px">
-                <Image className="skills-card-img" w="60%" m="auto" src={styled_components} alt="styled" /><br/>
-                <Text className="skills-card-name">Styled Components</Text>
+            <Box background={theme?"transparent":"#1A202C"} className="skills-card">
+                <Image className="skills-card-img" pointerEvents={'none'} w="65%" m="auto" src={bootstrap} alt="bootstrap" /><br/>
+                <Text className="skills-card-name" m="14px 0 0">Bootstrap</Text>
             </Box>
             <Box background={theme?"transparent":"#1A202C"} className="skills-card">
-                <Image className="skills-card-img" w="63%" m="auto" src={angular} alt="angular" /><br/>
-                <Text className="skills-card-name">Angular</Text>
+                <Image className="skills-card-img" pointerEvents={'none'} w="63%" m="auto" src={next} alt="next" /><br/>
+                <Text className="skills-card-name">Next JS</Text>
             </Box>
             <Box background={theme?"transparent":"#1A202C"} className="skills-card">
-                <Image className="skills-card-img" filter={theme?"none":"invert(100%)"} w="63%" m="auto" src={prompt} alt="prompt_engineering" /><br/>
-                <Text className="skills-card-name">Prompt Engineering</Text>
+                <Image className="skills-card-img" pointerEvents={'none'} filter={theme?"none":"invert(100%)"} w="63%" m="auto" src={prompt} alt="prompt_engineering" /><br/>
+                <Text className="skills-card-name">ChatGPT</Text>
+            </Box>
+            <Box background={theme?"transparent":"#1A202C"} className="skills-card">
+                <Image className="skills-card-img" pointerEvents={'none'} w= "67%" m="auto" src={postman} alt="postman" /><br/>
+                <Text className="skills-card-name">Postman</Text>
             </Box>
         </SimpleGrid><br/><br/>
         
