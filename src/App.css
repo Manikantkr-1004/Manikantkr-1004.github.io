@@ -225,7 +225,7 @@ body::-webkit-scrollbar-track {
   border-radius: 10px;
   transition: .3s ease-in-out 0s;
 }
-.skill-box>*:hover{
+.skill-box>.skills-card:hover{
   cursor: pointer;
   transform: scale(1.1);
 }
