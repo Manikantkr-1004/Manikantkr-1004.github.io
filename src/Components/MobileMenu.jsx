@@ -5,22 +5,20 @@ import {
     DrawerContent,
     Box,Text
   } from '@chakra-ui/react'
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClose, faDownload } from '@fortawesome/free-solid-svg-icons';
-import wall from "./Files/wall.jpg"
 
-
-export const MobileMenu=({theme, isOpen, onOpen, onClose})=> {
+export const MobileMenu=({isOpen, onClose})=> {
 
   const close = <FontAwesomeIcon shake size='xl' icon={faClose} />
-  const download = <FontAwesomeIcon size="md" icon={faDownload} />
+  const download = <FontAwesomeIcon icon={faDownload} />
   
 
   const handleResume = ()=>{
         
     const anchor = document.createElement('a');
-    anchor.href = process.env.PUBLIC_URL+ "/Resume/" + "Manikant-Kumar-Resume.pdf";
+    anchor.href = process.env.PUBLIC_URL+ "/Pdf/" + "Manikant-Kumar-Resume.pdf";
     anchor.download = 'Manikant-Kumar-Resume.pdf';
     anchor.click();
     window.open("https://drive.google.com/file/d/1JX0x0TlzWKIg2job7RJBRAASFkYkCfAs/view?usp=sharing","_blank")
@@ -35,7 +33,7 @@ export const MobileMenu=({theme, isOpen, onOpen, onClose})=> {
         size='full'
       >
         <DrawerOverlay />
-        <DrawerContent backgroundImage={wall} backgroundSize="cover" backgroundRepeat="no-repeat">
+        <DrawerContent backgroundImage={'/Images/wall.jpg'} backgroundSize="cover" backgroundRepeat="no-repeat">
         <Text onClick={()=> onClose()} w="30px" cursor="pointer" color="white" m="5px 0px 0px 10px" fontSize="23px" fontWeight="bold">{close}</Text>
           <DrawerBody textAlign="center" color="white" p="0">
           <Link

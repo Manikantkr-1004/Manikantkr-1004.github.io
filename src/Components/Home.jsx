@@ -1,7 +1,5 @@
 import {Flex, Heading, Text,Button} from "@chakra-ui/react"
 import Typed from "typed.js";
-import hi from "../Components/Files/hi.gif"
-import manikant from "../Components/Files/manikant-kumar.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faDownload, faEnvelopeSquare, faPhoneSquare} from "@fortawesome/free-solid-svg-icons"
@@ -13,16 +11,18 @@ const Home = ({theme})=>{
     const linkedin = <FontAwesomeIcon size="xl" icon={faLinkedin} />
     const phone = <FontAwesomeIcon size="xl" icon={faPhoneSquare} />
     const email = <FontAwesomeIcon size="xl" icon={faEnvelopeSquare} />
-    const download = <FontAwesomeIcon size="md" icon={faDownload} />
+    const download = <FontAwesomeIcon icon={faDownload} />
 
     const el = React.useRef(null);
 
     React.useEffect(() => {
         const typed = new Typed(el.current, {
         strings: [
-            "Web Developer.",
             "Full Stack Developer.",
-            "Mern Stack Developer."
+            "Mern Developer.",
+            "NextJS Developer.",
+            "ReactJS Developer.",
+            "Web Developer."
         ],
         typeSpeed: 80, // Adjust the speed of each character being typed
         backSpeed: 10, // Adjust the speed of deleting each character when backspacing
@@ -42,10 +42,9 @@ const Home = ({theme})=>{
         };
     }, []);
 
-    const handleResume = ()=>{
-        
+    const handleResume = ()=>{    
         const anchor = document.createElement('a');
-        anchor.href = process.env.PUBLIC_URL+ "/Resume/" + "Manikant-Kumar-Resume.pdf";
+        anchor.href = process.env.PUBLIC_URL+ "/Pdf/" + "Manikant-Kumar-Resume.pdf";
         anchor.download = 'Manikant-Kumar-Resume.pdf';
         anchor.click();
         window.open("https://drive.google.com/file/d/1JX0x0TlzWKIg2job7RJBRAASFkYkCfAs/view?usp=sharing","_blank")
@@ -62,7 +61,7 @@ const Home = ({theme})=>{
             fontFamily="papyrus" as="h3" 
             size="md" 
             fontSize={{base:"22px", sm:"24px", md:"27px",lg:"27px",xl:"27px"}}
-            >Hello <span><img className="hiimage" src={hi} alt="hi" /></span>, My Name is</Heading>
+            >Hello <span><img className="hiimage" src={'/Images/hi.gif'} alt="hi" /></span>, My Name is</Heading>
 
            <Heading color={theme? "black" : "white"} id="user-detail-name"
             as="h3" size="lg" 
@@ -74,7 +73,7 @@ const Home = ({theme})=>{
 
            <Text id="user-detail-intro" color={theme? "black" : "white"}
             fontSize={{base:"15px", sm:"18px", md:"18px",lg:"18px",xl:"18px"}}
-            fontWeight="semibold" letterSpacing="0.5px">I am a skilled full-stack web developer, proficient in both front-end and back-end technologies, dedicated to creating engaging and user-friendly web experiences.</Text>
+            fontWeight="semibold" letterSpacing="0.5px">I am a skilled full-stack web developer (MERN & NextJS), proficient in both front-end and back-end technologies, dedicated to creating engaging and user-friendly web experiences for all.</Text>
 
             <br/>
 
@@ -96,7 +95,7 @@ const Home = ({theme})=>{
            variant="unstyled">Resume</Button>
         </div>
         <div>
-            <img class="home-img" src={manikant} alt="manikant-photo" style={{boxShadow: theme? "0px 0px 15px 1px #555555" : "0px 0px 15px 1px #EDFBFF"}}/>
+            <img className="home-img" src={'/Images/manikant-kumar.png'} alt="manikant-photo" style={{boxShadow: theme? "0px 0px 15px 1px #555555" : "0px 0px 15px 1px #EDFBFF"}}/>
         </div>
     </Flex>
 }

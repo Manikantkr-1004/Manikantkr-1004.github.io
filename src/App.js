@@ -1,10 +1,12 @@
 import './App.css';
 import { useEffect, useState, lazy, Suspense } from 'react';
-
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import { Helmet } from "react-helmet";
 import { Background } from './Components/Background';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 const About = lazy(() => import('./Components/About'));
 const Experience = lazy(() => import('./Components/Experience'));
@@ -16,7 +18,7 @@ const ScrollToTop = lazy(() => import('./Components/ScrollToTop'));
 
 function App() {
 
-  const [theme,setTheme] = useState(JSON.parse(localStorage.getItem("portfolio_color")) || false)
+  const [theme,setTheme] = useState(JSON.parse(localStorage.getItem("portfolio_color")) || false);
 
   useEffect(()=>{
     if(theme){
@@ -34,7 +36,7 @@ function App() {
       <Helmet>
         <meta name="theme-color" content={theme?"#EDF2F8":"#0F1624"} />
       </Helmet>
-      <Background theme={theme}/>
+      <Background />
       <Navbar theme={theme} setTheme={setTheme}/>
       <Home theme={theme}/>
       <Suspense fallback={<div>Loading...</div>}>

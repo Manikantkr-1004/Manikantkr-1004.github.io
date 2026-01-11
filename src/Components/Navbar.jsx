@@ -1,6 +1,4 @@
-import {Box, Flex,Button, useDisclosure} from "@chakra-ui/react"
-import darklogo from "../Components/Files/logo.gif"
-import lightlogo from "../Components/Files/logo_light.gif"
+import {Box, Flex, useDisclosure} from "@chakra-ui/react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faDownload, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from "react";
@@ -10,7 +8,7 @@ import {  MobileMenu } from "./MobileMenu";
 const Navbar = ({theme,setTheme})=>{
 
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const download = <FontAwesomeIcon size="md" icon={faDownload} />
+    const download = <FontAwesomeIcon icon={faDownload} />
     const bars = <FontAwesomeIcon size="lg" icon={faBars} />
     const moon = <FontAwesomeIcon size="lg" icon={faMoon} />
     const sun = <FontAwesomeIcon size="lg" icon={faSun} />
@@ -29,15 +27,15 @@ const Navbar = ({theme,setTheme})=>{
         };
       }, []);
 
-      const handleThemeToggle = (e) => {
-        e.preventDefault();
-        setTheme(!theme);
+      const handleThemeToggle = () => {
+        scroll.scrollToTop();
+        setTheme(!theme);      
       };
 
       const handleResume = ()=>{
         
         const anchor = document.createElement('a');
-        anchor.href = process.env.PUBLIC_URL+ "/Resume/" + "Manikant-Kumar-Resume.pdf";
+        anchor.href = process.env.PUBLIC_URL+ "/Pdf/" + "Manikant-Kumar-Resume.pdf";
         anchor.download = 'Manikant-Kumar-Resume.pdf';
         anchor.click();
         window.open("https://drive.google.com/file/d/1JX0x0TlzWKIg2job7RJBRAASFkYkCfAs/view?usp=sharing","_blank")
@@ -50,7 +48,7 @@ const Navbar = ({theme,setTheme})=>{
     background={theme? "#EDF2F8":"#0F1624"} fontFamily="bahnschrift"
     position='fixed' top="0" zIndex="99">
 
-        <Flex className="logo-image">{theme? <img src={lightlogo} alt="manikant-logo" /> : <img src={darklogo} alt="manikant-logo" />}</Flex>
+        <Flex className="logo-image">{theme? <img src={'/Images/logo_light.gif'} alt="manikant-logo" /> : <img src={'/Images/logo.gif'} alt="manikant-logo" />}</Flex>
         
         <Flex className="nav-sections" display={{base:"none", sm: "none", md: "none", lg: "flex", xl: "flex", "2xl": "flex" }}
         justify="space-between" gap="20px" h="100%" align="center"
@@ -116,17 +114,17 @@ const Navbar = ({theme,setTheme})=>{
               <Box className="nav-link contact">Contact</Box>
             </Link>
             <Box onClick={handleResume} id="resume-button-1" className="nav-link resume">Resume{" "}{download}</Box>
-            {theme? <Box onClick={handleThemeToggle}>{moon}</Box> : <Box onClick={handleThemeToggle}>{sun}</Box>}
+            <Box onClick={handleThemeToggle}>{theme ? moon : sun}</Box>
         </Flex>
 
         <Flex display={{base:"flex", sm: "flex", md: "flex", lg: "none", xl: "none", "2xl": "none" }} 
         justifyContent="space-between" gap="20px" h="100%" align="center" cursor="pointer"
          fontSize="20px" color={theme? "black" :"white"} >
-        {theme? <Box onClick={handleThemeToggle}>{moon}</Box> : <Box onClick={handleThemeToggle}>{sun}</Box>}
+        <Box onClick={handleThemeToggle}>{theme ? moon : sun}</Box>
         <Box onClick={()=> onOpen()} className="menu">{bars}</Box>
         </Flex>
 
-        <MobileMenu theme={theme} isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
+        <MobileMenu isOpen={isOpen} onClose={onClose} />
 
     </Flex>
 }

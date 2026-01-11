@@ -4,12 +4,6 @@ import { faEnvelopeSquare, faHeart, faPhoneSquare } from "@fortawesome/free-soli
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import { useForm, ValidationError } from '@formspree/react';
-import loadimg from "./Files/load.gif"
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-AOS.init();
-
-
 
 const Contact = ({theme})=>{
 
@@ -59,7 +53,7 @@ const Contact = ({theme})=>{
 
 
     return <>
-             <svg width="100%" height="100%" id="svg" viewBox="0 0 1400 320" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 C 0,400 0,200 0,200 C 64.80133185349611,200.4821309655938 129.60266370699222,200.96426193118756 176,218 C 222.39733629300778,235.03573806881244 250.39067702552722,268.62508324084354 306,272 C 361.6093229744728,275.37491675915646 444.8346281908989,248.53540510543843 505,243 C 565.1653718091011,237.46459489456157 602.2708102108768,253.2332963374029 643,253 C 683.7291897891232,252.7667036625971 728.0821309655939,236.53140954495007 785,209 C 841.9178690344061,181.46859045504993 911.4006659267479,142.6410654827969 967,157 C 1022.5993340732521,171.3589345172031 1064.315205327414,238.90432852386238 1111,235 C 1157.684794672586,231.09567147613762 1209.3385127635959,155.74162042175362 1265,138 C 1320.6614872364041,120.25837957824639 1380.3307436182022,160.1291897891232 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill={theme?"#Fff":"#1A202C"} fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
+             <svg width="100%" height="100%" id="svg" viewBox="0 0 1400 320" xmlns="http://www.w3.org/2000/svg" className="transition duration-300 ease-in-out delay-150"><path d="M 0,400 C 0,400 0,200 0,200 C 64.80133185349611,200.4821309655938 129.60266370699222,200.96426193118756 176,218 C 222.39733629300778,235.03573806881244 250.39067702552722,268.62508324084354 306,272 C 361.6093229744728,275.37491675915646 444.8346281908989,248.53540510543843 505,243 C 565.1653718091011,237.46459489456157 602.2708102108768,253.2332963374029 643,253 C 683.7291897891232,252.7667036625971 728.0821309655939,236.53140954495007 785,209 C 841.9178690344061,181.46859045504993 911.4006659267479,142.6410654827969 967,157 C 1022.5993340732521,171.3589345172031 1064.315205327414,238.90432852386238 1111,235 C 1157.684794672586,231.09567147613762 1209.3385127635959,155.74162042175362 1265,138 C 1320.6614872364041,120.25837957824639 1380.3307436182022,160.1291897891232 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" strokeWidth="0" fill={theme?"#Fff":"#1A202C"} fillOpacity="1" className="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
 
         <Flex id="contact" display="block" background={theme? "#fff" :"#1A202C"} w="100%"  pb="5px">
             <Heading pt="20px" color='#FE9119' as="h3" size="md" textAlign="center"  fontSize={{base:"30px", sm:"35px", md:"40px",lg:"40px",xl:"40px"}}>Contact <span style={{color: theme? "black":"white"}}>Me</span></Heading>
@@ -108,7 +102,7 @@ const Contact = ({theme})=>{
                         </FormControl>
 
                         {/* <Button background="#fe9119"  _hover={{background:"#fe9119"}} type="submit" w="100%">Send Message</Button> */}
-                        <button type="submit" onClick={handleButton} disabled={state.submitting} class="custom-btn btn-12"><span>{load? <img style={{display:"flex",margin:"auto",marginTop:"7px"}} width="25px" src={loadimg} alt="load"/>: "Click to Send"}</span><span>{load? <img style={{display:"flex",margin:"auto",marginTop:"7px"}} width="25px" src={loadimg} alt="load"/>: "Send Message"}</span></button>
+                        <button type="submit" onClick={handleButton} disabled={state.submitting} className="custom-btn btn-12"><span>{load? <img style={{display:"flex",margin:"auto",marginTop:"7px"}} width="25px" src={'/Images/load.gif'} alt="load"/>: "Click to Send"}</span><span>{load? <img style={{display:"flex",margin:"auto",marginTop:"7px"}} width="25px" src={'/Images/load.gif'} alt="load"/>: "Send Message"}</span></button>
                         
                     </form>
 

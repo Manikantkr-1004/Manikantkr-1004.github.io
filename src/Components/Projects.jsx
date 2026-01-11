@@ -1,28 +1,19 @@
 import { Flex, Heading, SimpleGrid } from "@chakra-ui/react";
-import healthelper from "./Files/healthelper.png"
-import upstyle from "./Files/upstyle.png"
-import licious from "./Files/licious.png"
-import web3buzz from "./Files/web3buzz.png"
-import recipeswap from "./Files/recipeswap.png"
-import notes from "./Files/notes.png"
-import bookhub from "./Files/bookhub.png"
-import portfolio_light from "./Files/portfolio_light.png"
-import portfolio_dark from "./Files/portfolio_dark.png"
 import { Cards } from "./Cards";
 
+const projectData = [
+    { dev: ": 4 Developers", days: ": 05 Days", pro: "Group Project", stack: [" React | ", "Redux | ", "Chakra UI | ", "NodeJS | ", "ExpressJS | ", "MongoDB"], name: "RecipeSwap", image: '/Images/recipeswap.webp', des: "A vibrant community for sharing, discovering, and discussing diverse recipes. Connect with food enthusiasts for culinary inspiration and delightful conversations. Join us today!", link: "https://recipeswap.netlify.app/", git: "https://github.com/Manikantkr-1004/RecipeSwap" },
+    { days: "02 Days", pro: "Individual Project", stack: [" NextJS | ", "Context API | ", "Tailwind CSS | ", "NodeJS | ", "ExpressJS | ", "MongoDB | ", "AI Integrated"], name: "IdeaSpark", image: '/Images/ideaspark.webp', des: "IdeaSpark is a dynamic platform for generating and sharing innovative ideas, powered by AI to enhance creativity by generating Ideas and Comparing two ideas to choose best one.", link: "https://ideasparkmani.vercel.app", git: "https://github.com/Manikantkr-1004/ideaspark-project" },
+    { dev: ": 2 Developers", days: ": 2 Months", pro: "Group Project", stack: [" NextJS | ", "Redux | ", "Next UI | ", "Tailwind CSS | ", "NodeJS | ", "ExpressJS | ", "MongoDB"], name: "Web3Buzz", image: '/Images/web3buzz.webp', des: "Developed Web3Buzz, a crypto-centric platform using Next.js, featuring admin controls for managing users and content, along with a CMS for authoring and publishing articles.", link: "https://web3buzz.io" },
+    { days: ": 03 Days", pro: "Individual Project", stack: [" React | ", "Redux | ", "Chakra UI | ", "NodeJS | ", "ExpressJS | ", "MongoDB"], name: "Notes APP", image: '/Images/notes.webp', des: "Professionally crafted notes website with React for a seamless user experience. Powered by Node.js, Express.js, and MongoDB for secure sign-in, creation, updates, and deletions of notes.", link: "https://notesbymani.netlify.app/", git: "https://github.com/Manikantkr-1004/NotesAPP" },
+    { days: ": 05 Days", pro: "Individual Project", stack: [" Angular | ", "Tailwind CSS | ", "FlowBite | ", "NodeJS | ", "ExpressJS | ", "MongoDB | ", "AI Integrated"], name: "BookHub", image: '/Images/bookhub.webp', des: "BookHub is a sophisticated online platform combining a feature-rich bookstore with a lively reading community, AI-powered, employing Angular for an immersive frontend experience.", link: "https://bookhubymani.netlify.app/", git: "https://github.com/Manikantkr-1004/BookHub" },
+    { days: ": 05 Days", pro: "Individual Project", stack: [" React | ", "Chakra UI | ", "React Particles | ", "AOS"], name: "My Portfolio", image: '/Images/portfolio_dark.webp', des: "Explore my recently crafted portfolio developed with React, Chakra UI, and more. Immerse in a seamless user experience with Dark Mode, Light Mode, and scrolling functionality.", link: "https://manikantkr-1004.github.io/", git: "https://github.com/Manikantkr-1004/Manikantkr-1004.github.io" },
+    { dev: ": 3 Developers", days: ": 05 Days", pro: "Group Project", stack: [" React | ", "Redux | ", "Chakra UI | ", "TypeScript"], name: "UpStyle", image: '/Images/upstyle.webp', des: "Elevate your wardrobe with premium clothing and timeless fashion. Discover curated collections that embody elegance and embrace the essence of style. Unleash your fashion potential today!", link: "https://upstylenew.netlify.app/", git: "https://github.com/Manikantkr-1004/UpStyle" },
+    { days: ": 05 Days", pro: "Individual Project", stack: [" React | ", "Chakra UI"], name: "Healthelper", image: '/Images/healthelper.webp', des: "Healthelper offers convenient online doctor booking and virtual consultations for patients facing health issues, providing affordable and accessible healthcare through Online.", link: "https://healthelper.netlify.app/", git: "https://github.com/Manikantkr-1004/Healthelper" },
+    { days: ": 05 Days", pro: "Individual Project", stack: [" HTML | ", "CSS | ", "JavaScript"], name: "Licious", image: '/Images/licious.webp', des: "Designed a website inspired by Licious, an online platform for fresh meat and seafood, where user can order fresh meat and seafood in cheap prices.", link: "https://productsite2023.netlify.app/", git: "https://github.com/Manikantkr-1004/Licious" }
+]
+
 const Projects = ({ theme }) => {
-
-    const projectData = [
-        { dev: ": 2 Developers", days: ": 2 Months", pro: "Group Project", stack: [" Next JS | ", "Redux | ", "Next UI | ", "Tailwind CSS | ", "Node JS | ", "Express JS | ", "MongoDB"], name: "Web3Buzz", image: web3buzz, des: "Developed Web3Buzz, a crypto-centric platform using Next.js, featuring admin controls for managing users and content, along with a CMS for authoring and publishing articles.", link: "https://web3buzz.io" },
-        { dev: ": 4 Developers", days: ": 05 Days", pro: "Group Project", stack: [" React | ", "Redux | ", "Chakra UI | ", "Node JS | ", "Express JS | ", "MongoDB"], name: "RecipeSwap", image: recipeswap, des: "A vibrant community for sharing, discovering, and discussing diverse recipes. Connect with food enthusiasts for culinary inspiration and delightful conversations. Join us today!", link: "https://recipeswap.netlify.app/", git: "https://github.com/Manikantkr-1004/RecipeSwap" },
-        { days: ": 03 Days", pro: "Individual Project", stack: [" React | ", "Redux | ", "Chakra UI | ", "Node JS | ", "Express JS | ", "MongoDB"], name: "Notes APP", image: notes, des: "Professionally crafted notes website with React for a seamless user experience. Powered by Node.js, Express.js, and MongoDB for secure sign-in, creation, updates, and deletions of notes.", link: "https://notesbymani.netlify.app/", git: "https://github.com/Manikantkr-1004/NotesAPP" },
-        { days: ": 05 Days", pro: "Individual Project", stack: [" Angular | ", "Tailwind CSS | ", "FlowBite | ", "Node JS | ", "Express JS | ", "MongoDB"], name: "BookHub", image: bookhub, des: "BookHub is a sophisticated online platform combining a feature-rich bookstore with a lively reading community, AI-powered, employing Angular for an immersive frontend experience.", link: "https://bookhubymani.netlify.app/", git: "https://github.com/Manikantkr-1004/BookHub" },
-        { days: ": 05 Days", pro: "Individual Project", stack: [" React | ", "Chakra UI | ", "React Particles | ", "AOS"], name: "My Portfolio", image: theme ? portfolio_dark : portfolio_light, des: "Explore my recently crafted portfolio developed with React, Chakra UI, and more. Immerse in a seamless user experience with Dark Mode, Light Mode, and scrolling functionality.", link: "https://manikantkr-1004.github.io/", git: "https://github.com/Manikantkr-1004/Manikantkr-1004.github.io" },
-        { dev: ": 3 Developers", days: ": 05 Days", pro: "Group Project", stack: [" React | ", "Redux | ", "Chakra UI | ", "TypeScript"], name: "UpStyle", image: upstyle, des: "Elevate your wardrobe with premium clothing and timeless fashion. Discover curated collections that embody elegance and embrace the essence of style. Unleash your fashion potential today!", link: "https://upstylenew.netlify.app/", git: "https://github.com/Manikantkr-1004/UpStyle" },
-        { days: ": 05 Days", pro: "Individual Project", stack: [" React | ", "Chakra UI"], name: "Healthelper", image: healthelper, des: "Healthelper offers convenient online doctor booking and virtual consultations for patients facing health issues, providing affordable and accessible healthcare through Online.", link: "https://healthelper.netlify.app/", git: "https://github.com/Manikantkr-1004/Healthelper" },
-        { days: ": 05 Days", pro: "Individual Project", stack: [" HTML | ", "CSS | ", "JavaScript"], name: "Licious", image: licious, des: "Designed a website inspired by Licious, an online platform for fresh meat and seafood, where user can order fresh meat and seafood in cheap prices.", link: "https://productsite2023.netlify.app/", git: "https://github.com/Manikantkr-1004/Licious" }
-    ]
-
 
     return <>
         <div style={{ background: theme ? "white" : "#1A202C" }}>
@@ -36,12 +27,12 @@ const Projects = ({ theme }) => {
             <SimpleGrid className="project-box" alignContent="center" gap="50px" columns={{ base: 1, sm: 1, md: 1, lg: 2, xl: 2 }} w={{ base: "90%", sm: "85%", md: "85%", lg: "85%", xl: "85%" }} m="auto" mt="100px" color={theme ? "black" : "white"}>
                 {
                     projectData.map((item) => (
-                        <Cards key={item.stack} {...item} theme={theme} />
+                        <Cards key={item.name} {...item} theme={theme} />
                     ))
                 }
             </SimpleGrid>
         </Flex>
-        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 210" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 C 0,400 0,200 0,200 C 128.64285714285717,221.96428571428572 257.28571428571433,243.92857142857144 390,258 C 522.7142857142857,272.07142857142856 659.5,278.25 786,263 C 912.5,247.74999999999997 1028.7142857142858,211.07142857142858 1136,197 C 1243.2857142857142,182.92857142857142 1341.642857142857,191.46428571428572 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill={theme ? "white" : "#1A202C"} fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0_0" transform="rotate(-180 720 200)"></path></svg>
+        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 210" xmlns="http://www.w3.org/2000/svg" className="transition duration-300 ease-in-out delay-150"><path d="M 0,400 C 0,400 0,200 0,200 C 128.64285714285717,221.96428571428572 257.28571428571433,243.92857142857144 390,258 C 522.7142857142857,272.07142857142856 659.5,278.25 786,263 C 912.5,247.74999999999997 1028.7142857142858,211.07142857142858 1136,197 C 1243.2857142857142,182.92857142857142 1341.642857142857,191.46428571428572 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" strokeWidth="0" fill={theme ? "white" : "#1A202C"} fillOpacity="1" className="transition-all duration-300 ease-in-out delay-150 path-0_0" transform="rotate(-180 720 200)"></path></svg>
     </>
 }
 

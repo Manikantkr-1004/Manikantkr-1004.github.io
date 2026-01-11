@@ -1,11 +1,11 @@
 import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { animateScroll as scroll } from 'react-scroll';
 
 const ScrollToTop = () => {
   const [showButton, setShowButton] = useState(false);
-  const up = <FontAwesomeIcon bounce size='md' icon={faAngleDoubleUp} />
+  const up = <FontAwesomeIcon bounce icon={faAngleDoubleUp} />
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);

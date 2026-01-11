@@ -1,22 +1,20 @@
 import { Box, Flex, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import matrix from "./Files/matrix.jfif"
+
+const expData = [
+    {
+        name: "The Matrix Labs",
+        role: "Software Developer",
+        duration: "Jan 2024 - Aug 2024",
+        link:"https://drive.google.com/file/d/1wSAPl0bFxTGec_TeiI_xjq4R_V68E1SL/view?usp=sharing",
+        image: '/Images/matrix.jfif'
+    }
+]
 
 const Experience = ({ theme }) => {
 
-    const external = <FontAwesomeIcon size="md" icon={faExternalLinkAlt} />
-
-    const expData = [
-        {
-            name: "The Matrix Labs",
-            role: "Software Developer",
-            duration: "Jan 2024 - Aug 2024",
-            link:"https://drive.google.com/file/d/1wSAPl0bFxTGec_TeiI_xjq4R_V68E1SL/view?usp=sharing",
-            image: matrix
-        }
-    ]
-
+    const external = <FontAwesomeIcon icon={faExternalLinkAlt} />
 
     return <>
         <Flex id="experience" display="block" w="100%" p="30px 0px 50px 0px">
@@ -26,8 +24,10 @@ const Experience = ({ theme }) => {
 
                 {
                     expData?.map((ele,ind) => (
-                        <Flex flexDirection={{base:"column", sm:"row", md:"row", lg:"row", xl:"row"}} key={ele.name} borderRadius="20px" position={'relative'} overflow="hidden" boxShadow='5px 5px 5px #00000024' background={theme ? "white" : "#1A202C"}>
-                            <Image width={{base:"100%",sm:"35%", md:"35%", lg:"35%", xl:"35%"}} height={'180px'} pointerEvents='none' src={matrix} alt={ele.name} />
+                        <Flex data-aos={ind%2===0 ? 'fade-right':'fade-left'} data-aos-duration="800" flexDirection={{base:"column", sm:"row", md:"row", lg:"row", xl:"row"}} key={ele.name} borderRadius="20px" position={'relative'} overflow="hidden" boxShadow='5px 5px 5px #00000024' background={theme ? "white" : "#1A202C"}>
+                            <Box width={{base:"100%",sm:"35%", md:"35%", lg:"35%", xl:"35%"}} height={'180px'} >
+                                <Image loading="lazy" width={'100%'} height={'100%'} objectFit={'cover'} pointerEvents='none' src={ele?.image} alt={ele.name} />
+                            </Box>
                             <Box width={{base:"100%",sm:"65%", md:"65%", lg:"65%", xl:"65%"}} p={'10px 20px'}>
                                 <Text fontWeight={'bold'} fontSize={'23px'} color={'#FE9119'}>{ele?.role}</Text>
                                 <Text fontWeight={'500'} fontSize={'18px'}  marginBottom={'10px'}>{ele?.name} </Text>

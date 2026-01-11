@@ -1,22 +1,17 @@
-import React from 'react'
 import { Card, CardBody, Flex, Image, Text } from '@chakra-ui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-AOS.init();
 
 export function Cards({ stack, name, image, des, link, git, theme, dev, pro, days }) {
 
     const github = <FontAwesomeIcon size="xl" icon={faGithub} />
     const external = <FontAwesomeIcon size="lg" icon={faExternalLinkAlt} />
-    //data-aos="fade-up" data-aos-duration="800"
 
     return (
-        <Card className="project-card" boxShadow={theme ? "rgba(0, 0, 0, 0.24) 0px 3px 8px" : "rgb(184, 184, 184) 0px 3px 8px"} p="0px" borderRadius="30px " bg={theme ? "#EDF2F8" : "#0F1624"} color={theme ? "black" : "white"} key={stack}>
+        <Card data-aos="fade-up" data-aos-duration="800" key={name} boxShadow={theme ? "rgba(0, 0, 0, 0.24) 0px 3px 8px" : "rgb(184, 184, 184) 0px 3px 8px"} p="0px" borderRadius="30px " bg={theme ? "#EDF2F8" : "#0F1624"} color={theme ? "black" : "white"}>
             <CardBody p="0" >
-                <Image borderRadius="30px 30px 0px 0px" w="100%"
+                <Image borderRadius="30px 30px 0px 0px" w="100%" loading='lazy'
                     src={image}
                     alt={name}
                 />
@@ -27,7 +22,7 @@ export function Cards({ stack, name, image, des, link, git, theme, dev, pro, day
                     <Text color="#FE9119" m="10px 0px" fontSize="17px" fontWeight="bold">Tech Stack :
                         {
                             stack.map((item) => (
-                                <span className="project-tech-stack" style={{ color: theme ? "black" : "white", fontWeight: "400" }}>{item}</span>
+                                <span key={item} className="project-tech-stack" style={{ color: theme ? "black" : "white", fontWeight: "400" }}>{item}</span>
                             ))
                         }
                     </Text>
