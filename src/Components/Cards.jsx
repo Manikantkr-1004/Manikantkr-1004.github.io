@@ -1,12 +1,8 @@
 import { Card, CardBody, Flex, Image, Text } from '@chakra-ui/react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import { FaGithub, FaExternalLinkAlt  } from "react-icons/fa";
+
 
 export function Cards({ stack, name, image, des, link, git, theme, dev, pro, days }) {
-
-    const github = <FontAwesomeIcon size="xl" icon={faGithub} />
-    const external = <FontAwesomeIcon size="lg" icon={faExternalLinkAlt} />
 
     return (
         <Card data-aos="fade-up" data-aos-duration="800" key={name} boxShadow={theme ? "rgba(0, 0, 0, 0.24) 0px 3px 8px" : "rgb(184, 184, 184) 0px 3px 8px"} p="0px" borderRadius="30px " bg={theme ? "#EDF2F8" : "#0F1624"} color={theme ? "black" : "white"}>
@@ -27,8 +23,8 @@ export function Cards({ stack, name, image, des, link, git, theme, dev, pro, day
                         }
                     </Text>
                     <Flex alignItems="center" w="50%" m="auto" mb="20px" justifyContent="space-between" fontSize="25px">
-                        {git && <Text className="project-github-link" _hover={{ color: "#fe9119" }} cursor="pointer"><a href={git} target='_blank'>{github}</a></Text>}
-                        {link && <Text className="project-deployed-link" _hover={{ color: "#fe9119" }} cursor="pointer"><a href={link} target='_blank'>{external}</a></Text>}
+                        {git && <Text className="project-github-link" _hover={{ color: "#fe9119" }} cursor="pointer"><a href={git} rel='me noopener' target='_blank'><FaGithub size={'32px'} /></a></Text>}
+                        {link && <Text className="project-deployed-link" _hover={{ color: "#fe9119" }} cursor="pointer"><a href={link} rel='noopener' target='_blank'><FaExternalLinkAlt /></a></Text>}
                     </Flex>
                 </Flex>
 

@@ -1,17 +1,10 @@
 import { Box, Button, Flex, FormControl, Heading, Input, InputGroup, InputLeftElement, SimpleGrid, Text, Textarea, useToast } from "@chakra-ui/react";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelopeSquare, faHeart, faPhoneSquare } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import { useForm, ValidationError } from '@formspree/react';
+import { FaGithub, FaLinkedin, FaPhoneAlt, FaEnvelope, FaHeart } from "react-icons/fa";
 
 const Contact = ({theme})=>{
 
-    const github = <FontAwesomeIcon size="xl" icon={faGithub} />
-    const linkedin = <FontAwesomeIcon size="xl" icon={faLinkedin} />
-    const phone = <FontAwesomeIcon size="xl" icon={faPhoneSquare} />
-    const email = <FontAwesomeIcon size="xl" icon={faEnvelopeSquare} />
-    const heart = <FontAwesomeIcon size="sm" beatFade icon={faHeart} />
     const toast = useToast();
     const [load,setLoad] = useState(false);
 
@@ -61,10 +54,10 @@ const Contact = ({theme})=>{
             <Flex direction={{base:"column",sm:"column",md:"row",lg:"row",xl:"row"}} w="85%" m="auto" mt="70px" color={theme? "black":"white"} mb="120px" justifyContent="space-between" gap="20px">
                 <SimpleGrid data-aos="flip-left" data-aos-duration="800" className="contact_cards" w={{base:"100%",sm:"100%",md:"48%",lg:"48%",xl:"48%"}} gap="50px" columns={{base:1,sm:2,md:2,lg:2,xl:2}}>
 
-                <Box m="auto" textAlign="center"><Button boxShadow={theme? "rgb(0, 0, 0) 0px 3px 8px":"rgba(218, 218, 218, 0.24) 0px 3px 8px"} w={{base:"130px",sm:"130px",md:"130px",lg:"130px",xl:"130px"}} h={{base:"130px",sm:"130px",md:"130px",lg:"130px",xl:"130px"}} _hover={{background:theme?"#FE9119":"white", color:theme?"black":"#fe9119"}} background="#000000" color="#fff" borderRadius="50%" variant="unstyled" fontSize="35px"><a href="https://github.com/Manikantkr-1004" target="_blank">{github}</a></Button><a href="https://github.com/Manikantkr-1004" target="_blank"><Text id="contact-github">Manikantkr-1004</Text></a></Box>
-                <Box m="auto" textAlign="center"><Button boxShadow={theme? "rgb(0, 0, 0) 0px 3px 8px":"rgba(218, 218, 218, 0.24) 0px 3px 8px"} w={{base:"130px",sm:"130px",md:"130px",lg:"130px",xl:"130px"}} h={{base:"130px",sm:"130px",md:"130px",lg:"130px",xl:"130px"}} _hover={{background:theme?"#FE9119":"white", color:theme?"black":"#fe9119"}} background="#000000" color="#fff" borderRadius="50%" variant="unstyled" fontSize="35px"><a href="https://www.linkedin.com/in/manikantofficial2023" target="_blank">{linkedin}</a></Button><a href="https://www.linkedin.com/in/manikantofficial2023" target="_blank"><Text id="contact-linkedin">Manikant Kumar</Text></a></Box>
-                <Box m="auto" textAlign="center"><Button boxShadow={theme? "rgb(0, 0, 0) 0px 3px 8px":"rgba(218, 218, 218, 0.24) 0px 3px 8px"} w={{base:"130px",sm:"130px",md:"130px",lg:"130px",xl:"130px"}} h={{base:"130px",sm:"130px",md:"130px",lg:"130px",xl:"130px"}} _hover={{background:theme?"#FE9119":"white", color:theme?"black":"#fe9119"}} background="#000000" color="#fff" borderRadius="50%" variant="unstyled" fontSize="35px"><a href="tel:+918102675820" target="_blank">{phone}</a></Button><a href="tel:+918102675820" target="_blank"><Text id="contact-phone">+91 8102675820</Text></a></Box>
-                <Box m="auto" textAlign="center"><Button boxShadow={theme? "rgb(0, 0, 0) 0px 3px 8px":"rgba(218, 218, 218, 0.24) 0px 3px 8px"} w={{base:"130px",sm:"130px",md:"130px",lg:"130px",xl:"130px"}} h={{base:"130px",sm:"130px",md:"130px",lg:"130px",xl:"130px"}} _hover={{background:theme?"#FE9119":"white", color:theme?"black":"#fe9119"}} background="#000000" color="#fff" borderRadius="50%" variant="unstyled" fontSize="35px"><a href="mailto:manikantobra@gmail.com" target="_blank">{email}</a></Button><a href="mailto:manikantobra@gmail.com" target="_blank"><Text id="contact-email">manikantobra@gmail.com</Text></a></Box>
+                <Box m="auto" textAlign="center"><Button display={'flex'} alignItems={'center'} justifyContent={'center'} boxShadow={theme? "rgb(0, 0, 0) 0px 3px 8px":"rgba(218, 218, 218, 0.24) 0px 3px 8px"} w={{base:"130px",sm:"130px",md:"130px",lg:"130px",xl:"130px"}} h={{base:"130px",sm:"130px",md:"130px",lg:"130px",xl:"130px"}} _hover={{background:theme?"#FE9119":"white", color:theme?"black":"#fe9119"}} background="#000000" color="#fff" borderRadius="50%" variant="unstyled" fontSize="35px"><a href="https://github.com/Manikantkr-1004" target="_blank" rel="me noopener"><FaGithub /></a></Button><a href="https://github.com/Manikantkr-1004" target="_blank" rel="me noopener"><Text id="contact-github">Manikantkr-1004</Text></a></Box>
+                <Box m="auto" textAlign="center"><Button display={'flex'} alignItems={'center'} justifyContent={'center'} boxShadow={theme? "rgb(0, 0, 0) 0px 3px 8px":"rgba(218, 218, 218, 0.24) 0px 3px 8px"} w={{base:"130px",sm:"130px",md:"130px",lg:"130px",xl:"130px"}} h={{base:"130px",sm:"130px",md:"130px",lg:"130px",xl:"130px"}} _hover={{background:theme?"#FE9119":"white", color:theme?"black":"#fe9119"}} background="#000000" color="#fff" borderRadius="50%" variant="unstyled" fontSize="35px"><a href="https://www.linkedin.com/in/manikantofficial2023" target="_blank" rel="noopener"><FaLinkedin /></a></Button><a href="https://www.linkedin.com/in/manikantofficial2023" target="_blank" rel="noopener"><Text id="contact-linkedin">Manikant Kumar</Text></a></Box>
+                <Box m="auto" textAlign="center"><Button display={'flex'} alignItems={'center'} justifyContent={'center'} boxShadow={theme? "rgb(0, 0, 0) 0px 3px 8px":"rgba(218, 218, 218, 0.24) 0px 3px 8px"} w={{base:"130px",sm:"130px",md:"130px",lg:"130px",xl:"130px"}} h={{base:"130px",sm:"130px",md:"130px",lg:"130px",xl:"130px"}} _hover={{background:theme?"#FE9119":"white", color:theme?"black":"#fe9119"}} background="#000000" color="#fff" borderRadius="50%" variant="unstyled" fontSize="35px"><a href="tel:+918102675820" target="_blank"><FaPhoneAlt /></a></Button><a href="tel:+918102675820" target="_blank"><Text id="contact-phone">+91 8102675820</Text></a></Box>
+                <Box m="auto" textAlign="center"><Button display={'flex'} alignItems={'center'} justifyContent={'center'} boxShadow={theme? "rgb(0, 0, 0) 0px 3px 8px":"rgba(218, 218, 218, 0.24) 0px 3px 8px"} w={{base:"130px",sm:"130px",md:"130px",lg:"130px",xl:"130px"}} h={{base:"130px",sm:"130px",md:"130px",lg:"130px",xl:"130px"}} _hover={{background:theme?"#FE9119":"white", color:theme?"black":"#fe9119"}} background="#000000" color="#fff" borderRadius="50%" variant="unstyled" fontSize="35px"><a href="mailto:manikantobra@gmail.com" target="_blank"><FaEnvelope /></a></Button><a href="mailto:manikantobra@gmail.com" target="_blank"><Text id="contact-email">mani...@gmail.com</Text></a></Box>
 
                 </SimpleGrid>
                 <Box data-aos="flip-right" data-aos-duration="800" w={{base:"100%",sm:"100%",md:"48%",lg:"48%",xl:"48%"}} p={{base:"10px 5px",sm:"10px 15px",md:"10px 30px",lg:"10px 50px",xl:"10px 50px"}}>
@@ -109,7 +102,7 @@ const Contact = ({theme})=>{
                 </Box>
 
             </Flex>
-            <Text fontSize="14px" textAlign="center" color={theme?"black":"#ffffff"}>Designed & Developed by <span style={{color:"#fe9119"}}>Manikant Kumar {heart}</span></Text>
+            <Text fontSize="14px" textAlign="center" color={theme?"black":"#ffffff"}>Designed & Developed by <span style={{color:"#fe9119"}}>Manikant Kumar <FaHeart style={{display:"inline-block", marginBottom:'-3px'}} /></span></Text>
         </Flex>
         </>
 }

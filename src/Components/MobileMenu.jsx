@@ -6,24 +6,11 @@ import {
     Box,Text
   } from '@chakra-ui/react'
 import { Link } from 'react-scroll';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClose, faDownload } from '@fortawesome/free-solid-svg-icons';
+import { FaDownload } from "react-icons/fa";
+import { IoIosCloseCircle } from "react-icons/io";
+import { downloadResume } from '../Utils/PdfDownload';
 
-export const MobileMenu=({isOpen, onClose})=> {
-
-  const close = <FontAwesomeIcon shake size='xl' icon={faClose} />
-  const download = <FontAwesomeIcon icon={faDownload} />
-  
-
-  const handleResume = ()=>{
-        
-    const anchor = document.createElement('a');
-    anchor.href = process.env.PUBLIC_URL+ "/Pdf/" + "Manikant-Kumar-Resume.pdf";
-    anchor.download = 'Manikant-Kumar-Resume.pdf';
-    anchor.click();
-    window.open("https://drive.google.com/file/d/1JX0x0TlzWKIg2job7RJBRAASFkYkCfAs/view?usp=sharing","_blank")
-  }
-    
+export const MobileMenu=({isOpen, onClose})=> {    
 
     return (
         <Drawer
@@ -34,7 +21,7 @@ export const MobileMenu=({isOpen, onClose})=> {
       >
         <DrawerOverlay />
         <DrawerContent backgroundImage={'/Images/wall.jpg'} backgroundSize="cover" backgroundRepeat="no-repeat">
-        <Text onClick={()=> onClose()} w="30px" cursor="pointer" color="white" m="5px 0px 0px 10px" fontSize="23px" fontWeight="bold">{close}</Text>
+        <Text onClick={()=> onClose()} w="30px" cursor="pointer" color="white" m="7px 0px 0px 7px" fontSize="32px" fontWeight="bold"><IoIosCloseCircle /></Text>
           <DrawerBody textAlign="center" color="white" p="0">
           <Link
               activeClass="active"
@@ -106,8 +93,8 @@ export const MobileMenu=({isOpen, onClose})=> {
             >
               <Box onClick={()=> onClose()} className="nav-link-mobile contact">Contact</Box>
             </Link><br/>
-            <Box onClick={handleResume} cursor="pointer" background="#FE9119" m="auto" fontSize="20px" fontFamily="arial black" fontWeight="bold" 
-            borderRadius="15px" color="black" w="150px" p="5px 10px">Resume {download}</Box>
+            <Box onClick={downloadResume} cursor="pointer" background="#FE9119" m="auto" fontSize="20px" fontFamily="arial black" fontWeight="bold" 
+            borderRadius="15px" color="black" w="150px" p="5px 10px">Resume <FaDownload style={{display:"inline-block"}} /></Box>
             <br />
           </DrawerBody>
         </DrawerContent>

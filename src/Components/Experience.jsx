@@ -1,6 +1,5 @@
 import { Box, Flex, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
-import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const expData = [
     {
@@ -13,8 +12,6 @@ const expData = [
 ]
 
 const Experience = ({ theme }) => {
-
-    const external = <FontAwesomeIcon icon={faExternalLinkAlt} />
 
     return <>
         <Flex id="experience" display="block" w="100%" p="30px 0px 50px 0px">
@@ -32,7 +29,7 @@ const Experience = ({ theme }) => {
                                 <Text fontWeight={'bold'} fontSize={'23px'} color={'#FE9119'}>{ele?.role}</Text>
                                 <Text fontWeight={'500'} fontSize={'18px'}  marginBottom={'10px'}>{ele?.name} </Text>
                                 <Text fontSize={'14px'} marginBottom={'20px'}>{ele?.duration}</Text>
-                                <a href={ele?.link} target='_blank'>Experience Letter : {external}</a>
+                                <a href={ele?.link} target='_blank' rel="noopener">Experience Letter : <FaExternalLinkAlt style={{display:"inline-block", marginBottom:'-2px'}} /></a>
                             </Box>
                             <Text style={{rotate:"-45deg"}} position={'absolute'} right={30} bottom={30} fontSize={'50px'} fontWeight={'bold'} opacity={'0.1'}>0{ind+1}</Text>
                         </Flex>

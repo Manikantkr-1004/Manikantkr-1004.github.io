@@ -23,10 +23,10 @@ const skillData = [
         name: "TypeScript",img: '/Images/typescript.png', imgWidth: "63%", textMargin: ""
     },
     {
-        name: "Mongo DB",img: '/Images/mongodb.png', imgWidth: "66%", textMargin: ""
+        name: "MongoDB",img: '/Images/mongodb.png', imgWidth: "66%", textMargin: ""
     },
     {
-        name: "Node JS",img: '/Images/nodejs.png', imgWidth: "60%", textMargin: ""
+        name: "NodeJS",img: '/Images/nodejs.png', imgWidth: "60%", textMargin: ""
     },
     {
         name: "Express",img: '/Images/express.png', imgWidth: "69%", textMargin: "", invertImg: true

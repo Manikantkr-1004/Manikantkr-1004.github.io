@@ -36,7 +36,6 @@ function App() {
       <Helmet>
         <meta name="theme-color" content={theme?"#EDF2F8":"#0F1624"} />
       </Helmet>
-      <Background />
       <Navbar theme={theme} setTheme={setTheme}/>
       <Home theme={theme}/>
       <Suspense fallback={<div>Loading...</div>}>
@@ -48,6 +47,7 @@ function App() {
         <Contact theme={theme}/>
         <ScrollToTop />
       </Suspense>
+      <Background theme={theme} />
     </div>
   );
 }

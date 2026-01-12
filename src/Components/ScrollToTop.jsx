@@ -1,11 +1,9 @@
-import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState, useEffect } from 'react';
 import { animateScroll as scroll } from 'react-scroll';
+import { FaArrowUp } from "react-icons/fa";
 
 const ScrollToTop = () => {
   const [showButton, setShowButton] = useState(false);
-  const up = <FontAwesomeIcon bounce icon={faAngleDoubleUp} />
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -28,7 +26,7 @@ const ScrollToTop = () => {
 
   return (
     <div className={`scroll-to-top ${showButton ? 'show' : ''}`} onClick={scrollToTop}>
-        <div className="scroll-icon">{up}</div>
+        <div className="scroll-icon"><FaArrowUp /></div>
       </div>
   );
 };
